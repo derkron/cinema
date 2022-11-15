@@ -67,15 +67,28 @@
     }
  ]
 
- let fila=document.getElementById("fila")
+ let etiquetafila=document.getElementById("fila")
 
  peliculas.forEach(function(pelicula){
-    console.log(pelicula.poster)
+    //para pintar la informacion de cada pelicula debemos
+    //aplicar una tecnica conocida como traversing
+    //TRAVERSING== CREAR ETIQUETAS DE HTML DESDE JS 
+    let columna=document.createElement("div")
+    columna.classList.add("col")
 
-    let foto=document.createElement("img")
-    foto.src=pelicula.poster
-    foto.classList.add("img-fluid","w-100")
+    let tarjeta=document.createElement("div")
+    tarjeta.classList.add("card","h-100")
 
-    fila.appendChild(foto)
+    let poster=document.createElement("img")
+    poster.classList.add("img-fluid","w-100")
+    poster.src=pelicula.poster
 
- })
+    //padres  e hijos
+    etiquetafila.appendChild(columna)
+    columna.appendChild(tarjeta)
+    tarjeta.appendChild(poster)
+    
+    
+    
+
+})

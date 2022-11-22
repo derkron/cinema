@@ -3,6 +3,8 @@ let peliculaConsultadaenMemoria=JSON.parse(localStorage.getItem("pelicula"))
 console.log(peliculaConsultadaenMemoria)
 
 //Asignando valores a las etiquetas que quiero controlar:
+
+
 let etiquetaImagen=document.getElementById("imagenPelicula")
 etiquetaImagen.src=peliculaConsultadaenMemoria.imagen
 
@@ -14,3 +16,6 @@ etiquetaDuracion.textContent=peliculaConsultadaenMemoria.duracion
 
 let etiquetcaSinopsis=document.getElementById("sinopsisPelicula")
 etiquetcaSinopsis.textContent=peliculaConsultadaenMemoria.sinopsis
+
+let etiquetaBanner=document.getElementById("bannerpelicula")
+etiquetaBanner.textContent=peliculaConsultadaenMemoria.banner
